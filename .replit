@@ -1,0 +1,52 @@
+modules = ["java"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["jdk11"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Android Geo-Fence App"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "android_app_check"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Android Code Analysis"
+
+[[workflows.workflow]]
+name = "Android Geo-Fence App"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "export JAVA_HOME=/nix/store/1jm9fvrqrry22z9kgqa0v55nnz0jsk09-openjdk-11.0.23+9 && ./gradlew assembleDebug"
+
+[[workflows.workflow]]
+name = "android_app_check"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "find app -type f | grep -v \"build\" | sort"
+
+[[workflows.workflow]]
+name = "Android Code Analysis"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "echo \"Android Project Structure Analysis\" && echo \"===============================\" && find app -type f | wc -l && echo \"Java files:\" && find app -name \"*.java\" | wc -l && echo \"XML files:\" && find app -name \"*.xml\" | wc -l"
+
+[deployment]
+run = ["sh", "-c", "export JAVA_HOME=/nix/store/1jm9fvrqrry22z9kgqa0v55nnz0jsk09-openjdk-11.0.23+9 && ./gradlew assembleDebug"]
