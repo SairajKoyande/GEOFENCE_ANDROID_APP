@@ -1,26 +1,22 @@
 [
     {
-        "merged": "C:\\Users\\NeuralBits\\.gradle\\daemon\\7.5\\com.example.geofenceapp-merged_res-39:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\NeuralBits\\.gradle\\daemon\\7.5\\com.example.geofenceapp-main-41:\\layout\\activity_main.xml"
+        "merged": "com.example.geofenceapp-merged_res-39:/layout_activity_maps.xml.flat",
+        "source": "com.example.geofenceapp-main-41:/layout/activity_maps.xml"
     },
     {
-        "merged": "C:\\Users\\NeuralBits\\.gradle\\daemon\\7.5\\com.example.geofenceapp-merged_res-39:\\drawable_ic_notification.xml.flat",
-        "source": "C:\\Users\\NeuralBits\\.gradle\\daemon\\7.5\\com.example.geofenceapp-main-41:\\drawable\\ic_notification.xml"
-    },
-    {
-        "merged": "C:\\Users\\NeuralBits\\.gradle\\daemon\\7.5\\com.example.geofenceapp-merged_res-39:\\layout_activity_maps.xml.flat",
-        "source": "C:\\Users\\NeuralBits\\.gradle\\daemon\\7.5\\com.example.geofenceapp-main-41:\\layout\\activity_maps.xml"
-    },
-    {
-        "merged": "C:\\Users\\NeuralBits\\.gradle\\daemon\\7.5\\com.example.geofenceapp-merged_res-39:\\layout_activity_settings.xml.flat",
-        "source": "C:\\Users\\NeuralBits\\.gradle\\daemon\\7.5\\com.example.geofenceapp-main-41:\\layout\\activity_settings.xml"
+        "merged": "com.example.geofenceapp-merged_res-39:/drawable_ic_notification.xml.flat",
+        "source": "com.example.geofenceapp-main-41:/drawable/ic_notification.xml"
     },
     {
         "merged": "com.example.geofenceapp-merged_res-39:/raw_alert_sound.mp3.flat",
         "source": "com.example.geofenceapp-main-41:/raw/alert_sound.mp3"
     },
     {
-        "merged": "C:\\Users\\NeuralBits\\.gradle\\daemon\\7.5\\com.example.geofenceapp-merged_res-39:\\raw_alert_sound.xml.flat",
-        "source": "C:\\Users\\NeuralBits\\.gradle\\daemon\\7.5\\com.example.geofenceapp-main-41:\\raw\\alert_sound.xml"
+        "merged": "com.example.geofenceapp-merged_res-39:/layout_activity_settings.xml.flat",
+        "source": "com.example.geofenceapp-main-41:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.example.geofenceapp-merged_res-39:/layout_activity_main.xml.flat",
+        "source": "com.example.geofenceapp-main-41:/layout/activity_main.xml"
     }
 ]

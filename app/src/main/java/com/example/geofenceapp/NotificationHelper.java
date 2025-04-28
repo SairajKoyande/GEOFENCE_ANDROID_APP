@@ -22,6 +22,7 @@ public class NotificationHelper {
     private static final int NOTIFICATION_ID_ENTER = 1001;
     private static final int NOTIFICATION_ID_EXIT = 1002;
 
+
     private final Context context;
     private final NotificationManager notificationManager;
 

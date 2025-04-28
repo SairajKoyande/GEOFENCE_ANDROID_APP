@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1001;
     private static final int BACKGROUND_LOCATION_PERMISSION_REQUEST_CODE = 1002;
+    private static final int NOTIFICATION_PERMISSION_REQUEST_CODE = 1003;
 
     private Button btnOpenMap;
     private Button btnSettings;
@@ -95,11 +96,21 @@ public class MainActivity extends AppCompatActivity {
         return true; // Background location permission not needed for Android 9 and below
     }
 
+    private boolean checkNotificationPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            return ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                    == PackageManager.PERMISSION_GRANTED;
+        }
+        return true; // Permission not needed for Android 12 and below
+    }
+
     private void checkAndRequestPermissions() {
         if (!checkLocationPermission()) {
             requestLocationPermission();
         } else if (!checkBackgroundLocationPermission()) {
             requestBackgroundLocationPermission();
+        } else if (!checkNotificationPermission()) {
+            requestNotificationPermission();
         }
     }
 
@@ -153,6 +164,31 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void requestNotificationPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.POST_NOTIFICATIONS)) {
+                new AlertDialog.Builder(this)
+                        .setTitle("Notification Permission Needed")
+                        .setMessage("This app needs notification permission to alert you about geofence transitions.")
+                        .setPositiveButton("OK", (dialog, which) -> {
+                            ActivityCompat.requestPermissions(
+                                    MainActivity.this,
+                                    new String[]{Manifest.permission.POST_NOTIFICATIONS},
+                                    NOTIFICATION_PERMISSION_REQUEST_CODE
+                            );
+                        })
+                        .create()
+                        .show();
+            } else {
+                ActivityCompat.requestPermissions(
+                        this,
+                        new String[]{Manifest.permission.POST_NOTIFICATIONS},
+                        NOTIFICATION_PERMISSION_REQUEST_CODE
+                );
+            }
+        }
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -162,6 +198,8 @@ public class MainActivity extends AppCompatActivity {
                 // Location permission granted, now request background location if needed
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && !checkBackgroundLocationPermission()) {
                     requestBackgroundLocationPermission();
+                } else if (!checkNotificationPermission()) {
+                    requestNotificationPermission();
                 }
             } else {
                 Toast.makeText(this, "Location permission is required for this app", Toast.LENGTH_LONG).show();
@@ -171,9 +209,19 @@ public class MainActivity extends AppCompatActivity {
         } else if (requestCode == BACKGROUND_LOCATION_PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(this, "Background location permission granted", Toast.LENGTH_SHORT).show();
+                if (!checkNotificationPermission()) {
+                    requestNotificationPermission();
+                }
             } else {
                 Toast.makeText(this, "Background location permission is required for geofence monitoring", Toast.LENGTH_LONG).show();
                 // Show option to open app settings
+                showSettingsDialog();
+            }
+        } else if (requestCode == NOTIFICATION_PERMISSION_REQUEST_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Notification permission granted", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Notifications will not work without permission", Toast.LENGTH_LONG).show();
                 showSettingsDialog();
             }
         }
@@ -182,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
     private void showSettingsDialog() {
         new AlertDialog.Builder(this)
                 .setTitle("Permissions Required")
-                .setMessage("This app needs location permissions to work properly. Go to settings to grant permissions.")
+                .setMessage("This app needs permissions to work properly. Go to settings to grant permissions.")
                 .setPositiveButton("Settings", (dialog, which) -> {
                     Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                     Uri uri = Uri.fromParts("package", getPackageName(), null);

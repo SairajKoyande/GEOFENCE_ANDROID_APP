@@ -32,167 +32,170 @@
 22    <uses-permission android:name="android.permission.VIBRATE" />
 22-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:16:5-66
 22-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:16:22-63
-23
-24    <!-- Include required permissions for Google Maps API to run. -->
-25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-25-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:23:5-79
-25-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:23:22-76
-26
-27    <uses-feature
-27-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:26:5-28:35
-28        android:glEsVersion="0x00020000"
-28-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:27:9-41
-29        android:required="true" />
-29-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:28:9-32
-30
-31    <queries>
-31-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:30:5-34:15
-32
-33        <!-- Needs to be explicitly declared on Android R+ -->
-34        <package android:name="com.google.android.apps.maps" />
-34-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:9-64
-34-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:18-61
-35    </queries>
-36
-37    <permission
-37-->[androidx.core:core:1.9.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-38        android:name="com.example.geofenceapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-38-->[androidx.core:core:1.9.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-39        android:protectionLevel="signature" />
-39-->[androidx.core:core:1.9.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
-40
-41    <uses-permission android:name="com.example.geofenceapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-41-->[androidx.core:core:1.9.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-41-->[androidx.core:core:1.9.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-42
-43    <application
-43-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:18:5-58:19
-44        android:allowBackup="true"
-44-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:19:9-35
-45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-45-->[androidx.core:core:1.9.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-46        android:debuggable="true"
-47        android:label="Sairaj GEOFENCE"
-47-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:21:9-40
-48        android:supportsRtl="true"
-48-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:23:9-35
-49        android:theme="@style/AppTheme" >
-49-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:24:9-40
-50
-51        <!-- Main Activity -->
-52        <activity
-52-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:27:9-34:20
-53            android:name="com.example.geofenceapp.MainActivity"
-53-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:28:13-41
-54            android:exported="true" >
-54-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:29:13-36
-55            <intent-filter>
-55-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:30:13-33:29
-56                <action android:name="android.intent.action.MAIN" />
-56-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:31:17-69
-56-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:31:25-66
-57
-58                <category android:name="android.intent.category.LAUNCHER" />
-58-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:32:17-77
-58-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:32:27-74
-59            </intent-filter>
-60        </activity>
-61
-62        <!-- Maps Activity -->
-63        <activity
-63-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:37:9-40:58
-64            android:name="com.example.geofenceapp.MapsActivity"
-64-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:38:13-41
-65            android:label="@string/map_screen_title"
-65-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:39:13-53
-66            android:parentActivityName="com.example.geofenceapp.MainActivity" />
-66-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:40:13-55
-67
-68        <!-- Settings Activity -->
-69        <activity
-69-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:43:9-46:58
-70            android:name="com.example.geofenceapp.SettingsActivity"
-70-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:44:13-45
-71            android:label="@string/settings_screen_title"
-71-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:45:13-58
-72            android:parentActivityName="com.example.geofenceapp.MainActivity" />
-72-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:46:13-55
-73
-74        <!-- Google Maps API Key -->
-75        <meta-data
-75-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:49:9-51:71
-76            android:name="com.google.android.geo.API_KEY"
-76-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:50:13-58
-77            android:value="AIzaSyAGRFHTZUrCGP8CjsJIK7_n_Je3IUzLcHM" />
-77-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:51:13-68
-78
-79        <!-- BroadcastReceiver for Geofence transitions -->
-80        <receiver
-80-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:54:9-57:39
-81            android:name="com.example.geofenceapp.GeofenceBroadcastReceiver"
-81-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:55:13-54
-82            android:enabled="true"
-82-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:56:13-35
-83            android:exported="true" />
-83-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:57:13-36
-84        <!-- Needs to be explicitly declared on P+ -->
-85        <uses-library
-85-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:39:9-41:40
-86            android:name="org.apache.http.legacy"
-86-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:40:13-50
-87            android:required="false" />
-87-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:41:13-37
-88
-89        <activity
-89-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\c9689ede738a0727c36b2c7af70407c5\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
-90            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-90-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\c9689ede738a0727c36b2c7af70407c5\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
-91            android:exported="false"
-91-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\c9689ede738a0727c36b2c7af70407c5\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
-92            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-92-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\c9689ede738a0727c36b2c7af70407c5\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
-93
-94        <meta-data
-94-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\20fdcf5775d00635f5f23eacb7b4bee9\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
-95            android:name="com.google.android.gms.version"
-95-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\20fdcf5775d00635f5f23eacb7b4bee9\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
-96            android:value="@integer/google_play_services_version" />
-96-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\20fdcf5775d00635f5f23eacb7b4bee9\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
-97
-98        <provider
-98-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-99            android:name="androidx.startup.InitializationProvider"
-99-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-100            android:authorities="com.example.geofenceapp.androidx-startup"
-100-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-101            android:exported="false" >
-101-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-102            <meta-data
-102-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-103                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-103-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-104                android:value="androidx.startup" />
-104-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-105            <meta-data
-105-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\NeuralBits\.gradle\caches\transforms-3\1d1173f99a1313055c26367e9296308a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-106                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-106-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\NeuralBits\.gradle\caches\transforms-3\1d1173f99a1313055c26367e9296308a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-107                android:value="androidx.startup" />
-107-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\NeuralBits\.gradle\caches\transforms-3\1d1173f99a1313055c26367e9296308a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-108        </provider>
-109
-110        <uses-library
-110-->[androidx.window:window:1.0.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\47c4e7fb7cf2c0bd5a93f179f378d7f3\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-111            android:name="androidx.window.extensions"
-111-->[androidx.window:window:1.0.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\47c4e7fb7cf2c0bd5a93f179f378d7f3\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-112            android:required="false" />
-112-->[androidx.window:window:1.0.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\47c4e7fb7cf2c0bd5a93f179f378d7f3\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-113        <uses-library
-113-->[androidx.window:window:1.0.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\47c4e7fb7cf2c0bd5a93f179f378d7f3\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-114            android:name="androidx.window.sidecar"
-114-->[androidx.window:window:1.0.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\47c4e7fb7cf2c0bd5a93f179f378d7f3\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-115            android:required="false" />
-115-->[androidx.window:window:1.0.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\47c4e7fb7cf2c0bd5a93f179f378d7f3\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
-116    </application>
-117
-118</manifest>
+23    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+23-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:18:5-77
+23-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:18:22-74
+24
+25    <!-- Include required permissions for Google Maps API to run. -->
+26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+26-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:23:5-79
+26-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:23:22-76
+27
+28    <uses-feature
+28-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:26:5-28:35
+29        android:glEsVersion="0x00020000"
+29-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:27:9-41
+30        android:required="true" />
+30-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:28:9-32
+31
+32    <queries>
+32-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:30:5-34:15
+33
+34        <!-- Needs to be explicitly declared on Android R+ -->
+35        <package android:name="com.google.android.apps.maps" />
+35-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:9-64
+35-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:18-61
+36    </queries>
+37
+38    <permission
+38-->[androidx.core:core:1.9.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+39        android:name="com.example.geofenceapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+39-->[androidx.core:core:1.9.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+40        android:protectionLevel="signature" />
+40-->[androidx.core:core:1.9.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+41
+42    <uses-permission android:name="com.example.geofenceapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+42-->[androidx.core:core:1.9.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+42-->[androidx.core:core:1.9.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+43
+44    <application
+44-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:20:5-60:19
+45        android:allowBackup="true"
+45-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:21:9-35
+46        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+46-->[androidx.core:core:1.9.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+47        android:debuggable="true"
+48        android:label="Sairaj GEOFENCE"
+48-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:23:9-40
+49        android:supportsRtl="true"
+49-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:25:9-35
+50        android:theme="@style/AppTheme" >
+50-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:26:9-40
+51
+52        <!-- Main Activity -->
+53        <activity
+53-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:29:9-36:20
+54            android:name="com.example.geofenceapp.MainActivity"
+54-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:30:13-41
+55            android:exported="true" >
+55-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:31:13-36
+56            <intent-filter>
+56-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:32:13-35:29
+57                <action android:name="android.intent.action.MAIN" />
+57-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:33:17-69
+57-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:33:25-66
+58
+59                <category android:name="android.intent.category.LAUNCHER" />
+59-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:34:17-77
+59-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:34:27-74
+60            </intent-filter>
+61        </activity>
+62
+63        <!-- Maps Activity -->
+64        <activity
+64-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:39:9-42:58
+65            android:name="com.example.geofenceapp.MapsActivity"
+65-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:40:13-41
+66            android:label="@string/map_screen_title"
+66-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:41:13-53
+67            android:parentActivityName="com.example.geofenceapp.MainActivity" />
+67-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:42:13-55
+68
+69        <!-- Settings Activity -->
+70        <activity
+70-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:45:9-48:58
+71            android:name="com.example.geofenceapp.SettingsActivity"
+71-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:46:13-45
+72            android:label="@string/settings_screen_title"
+72-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:47:13-58
+73            android:parentActivityName="com.example.geofenceapp.MainActivity" />
+73-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:48:13-55
+74
+75        <!-- Google Maps API Key -->
+76        <meta-data
+76-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:51:9-53:71
+77            android:name="com.google.android.geo.API_KEY"
+77-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:52:13-58
+78            android:value="AIzaSyAGRFHTZUrCGP8CjsJIK7_n_Je3IUzLcHM" />
+78-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:53:13-68
+79
+80        <!-- BroadcastReceiver for Geofence transitions -->
+81        <receiver
+81-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:56:9-59:39
+82            android:name="com.example.geofenceapp.GeofenceBroadcastReceiver"
+82-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:57:13-54
+83            android:enabled="true"
+83-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:58:13-35
+84            android:exported="true" />
+84-->C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\src\main\AndroidManifest.xml:59:13-36
+85        <!-- Needs to be explicitly declared on P+ -->
+86        <uses-library
+86-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:39:9-41:40
+87            android:name="org.apache.http.legacy"
+87-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:40:13-50
+88            android:required="false" />
+88-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\5482c1d6755f8defa05ba523a55f368d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:41:13-37
+89
+90        <activity
+90-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\c9689ede738a0727c36b2c7af70407c5\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+91            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+91-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\c9689ede738a0727c36b2c7af70407c5\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+92            android:exported="false"
+92-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\c9689ede738a0727c36b2c7af70407c5\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+93            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+93-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\c9689ede738a0727c36b2c7af70407c5\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+94
+95        <meta-data
+95-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\20fdcf5775d00635f5f23eacb7b4bee9\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+96            android:name="com.google.android.gms.version"
+96-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\20fdcf5775d00635f5f23eacb7b4bee9\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+97            android:value="@integer/google_play_services_version" />
+97-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\20fdcf5775d00635f5f23eacb7b4bee9\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+98
+99        <provider
+99-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+100            android:name="androidx.startup.InitializationProvider"
+100-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+101            android:authorities="com.example.geofenceapp.androidx-startup"
+101-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+102            android:exported="false" >
+102-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+103            <meta-data
+103-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+104                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+104-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+105                android:value="androidx.startup" />
+105-->[androidx.emoji2:emoji2:1.2.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+106            <meta-data
+106-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\NeuralBits\.gradle\caches\transforms-3\1d1173f99a1313055c26367e9296308a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+107                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+107-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\NeuralBits\.gradle\caches\transforms-3\1d1173f99a1313055c26367e9296308a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+108                android:value="androidx.startup" />
+108-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\NeuralBits\.gradle\caches\transforms-3\1d1173f99a1313055c26367e9296308a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+109        </provider>
+110
+111        <uses-library
+111-->[androidx.window:window:1.0.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\47c4e7fb7cf2c0bd5a93f179f378d7f3\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+112            android:name="androidx.window.extensions"
+112-->[androidx.window:window:1.0.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\47c4e7fb7cf2c0bd5a93f179f378d7f3\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+113            android:required="false" />
+113-->[androidx.window:window:1.0.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\47c4e7fb7cf2c0bd5a93f179f378d7f3\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+114        <uses-library
+114-->[androidx.window:window:1.0.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\47c4e7fb7cf2c0bd5a93f179f378d7f3\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+115            android:name="androidx.window.sidecar"
+115-->[androidx.window:window:1.0.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\47c4e7fb7cf2c0bd5a93f179f378d7f3\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+116            android:required="false" />
+116-->[androidx.window:window:1.0.0] C:\Users\NeuralBits\.gradle\caches\transforms-3\47c4e7fb7cf2c0bd5a93f179f378d7f3\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+117    </application>
+118
+119</manifest>
