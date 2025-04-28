@@ -23,10 +23,8 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Enable the back button in the action bar
         ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle(R.string.settings_screen_title);
-        }
+        if (actionBar != null)
+
 
         // Initialize UI components
         switchNotification = findViewById(R.id.switch_notification);

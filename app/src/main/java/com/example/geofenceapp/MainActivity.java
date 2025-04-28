@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Initialize GeofenceHelper
         geofenceHelper = new GeofenceHelper(this);
-        
+
         // Initialize SharedPreferences
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -83,13 +83,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean checkLocationPermission() {
-        return ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) 
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED;
     }
 
     private boolean checkBackgroundLocationPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            return ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_BACKGROUND_LOCATION) 
+            return ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_BACKGROUND_LOCATION)
                     == PackageManager.PERMISSION_GRANTED;
         }
         return true; // Background location permission not needed for Android 9 and below
@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        
+
         if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 // Location permission granted, now request background location if needed
@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateGeofenceStatus() {
         boolean isGeofenceActive = GeofenceSettings.isGeofenceActive(this);
-        
+
         if (isGeofenceActive) {
             txtGeofenceStatus.setText(getString(R.string.geofence_status_active));
             txtGeofenceStatus.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
@@ -210,16 +210,16 @@ public class MainActivity extends AppCompatActivity {
         double latitude = sharedPreferences.getFloat(GeofenceSettings.KEY_LATITUDE, 0);
         double longitude = sharedPreferences.getFloat(GeofenceSettings.KEY_LONGITUDE, 0);
         float radius = sharedPreferences.getFloat(GeofenceSettings.KEY_RADIUS, 100);
-        
+
         StringBuilder sb = new StringBuilder();
         sb.append(getString(R.string.current_location))
-          .append(": ")
-          .append(String.format("%.6f, %.6f", latitude, longitude))
-          .append("\n")
-          .append(getString(R.string.radius))
-          .append(": ")
-          .append(String.format("%.0f meters", radius));
-        
+                .append(": ")
+                .append(String.format("%.6f, %.6f", latitude, longitude))
+                .append("\n")
+                .append(getString(R.string.radius))
+                .append(": ")
+                .append(String.format("%.0f meters", radius));
+
         txtCurrentSettings.setText(sb.toString());
     }
 }

@@ -1,4 +1,0 @@
-<resources>
-    <!-- This is a placeholder for an audio resource file. In a real app, we would include an actual audio file.
-         Instead, we are using Android's built-in notification sounds via the Notification.DEFAULT_SOUND flag in the NotificationHelper. -->
-</resources>

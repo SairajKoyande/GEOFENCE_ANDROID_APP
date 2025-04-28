@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -89,9 +90,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 geofenceRadius = progress;
-                if (geofenceRadius < 50) geofenceRadius = 50; // Minimum radius is 50m
+                if (geofenceRadius < 5) geofenceRadius = 5; // Minimum radius is 5
+                // m
                 radiusText.setText(getString(R.string.radius_value, geofenceRadius));
-                updateGeofenceCircle();
+                // Only update geofence circle if map is ready
+                if (mMap != null && selectedLocation != null) {
+                    updateGeofenceCircle();
+                }
             }
 
             @Override
@@ -136,6 +141,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (selectedLocation != null) {
             drawMarkerWithCircle(selectedLocation);
         }
+        // If we don't have a selected location yet, load from settings
+        else {
+            // Re-apply settings now that the map is ready
+            loadGeofenceSettings();
+
+            // Try to draw the geofence again if settings were loaded
+            if (selectedLocation != null) {
+                drawMarkerWithCircle(selectedLocation);
+            }
+        }
     }
 
     @Override
@@ -163,28 +178,38 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void drawMarkerWithCircle(LatLng position) {
-        // Clear previous markers
-        mMap.clear();
+        // Make sure map is initialized
+        if (mMap == null) {
+            return;
+        }
 
-        // Add marker for the selected location
-        mMap.addMarker(new MarkerOptions()
-                .position(position)
-                .title("Geofence Center"));
+        try {
+            // Clear previous markers
+            mMap.clear();
 
-        // Add circle to represent the geofence radius
-        mMap.addCircle(new CircleOptions()
-                .center(position)
-                .radius(geofenceRadius)
-                .strokeColor(Color.RED)
-                .fillColor(Color.parseColor("#220000FF"))
-                .strokeWidth(5));
+            // Add marker for the selected location
+            mMap.addMarker(new MarkerOptions()
+                    .position(position)
+                    .title("Geofence Center"));
 
-        // Move camera to the selected location
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(position, 15));
+            // Add circle to represent the geofence radius
+            mMap.addCircle(new CircleOptions()
+                    .center(position)
+                    .radius(geofenceRadius)
+                    .strokeColor(Color.RED)
+                    .fillColor(Color.parseColor("#220000FF"))
+                    .strokeWidth(5));
+
+            // Move camera to the selected location
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(position, 15));
+        } catch (Exception e) {
+            // Log any errors that might occur
+            Log.e("MapsActivity", "Error drawing marker with circle: " + e.getMessage());
+        }
     }
 
     private void updateGeofenceCircle() {
-        if (selectedLocation != null) {
+        if (mMap != null && selectedLocation != null) {
             drawMarkerWithCircle(selectedLocation);
         }
     }
@@ -235,12 +260,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             return;
         }
 
-        // Create geofence
+        // Create geofence - register for both ENTER and EXIT transitions
         Geofence geofence = geofenceHelper.getGeofence(
                 GEOFENCE_ID,
                 selectedLocation,
                 geofenceRadius,
-                Geofence.GEOFENCE_TRANSITION_EXIT
+                Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_EXIT
         );
 
         // Create geofencing request
@@ -271,12 +296,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         geofencingClient.removeGeofences(geofenceIds)
                 .addOnSuccessListener(aVoid -> {
                     Toast.makeText(MapsActivity.this, "Geofence removed successfully", Toast.LENGTH_SHORT).show();
-                    // Clear the map
-                    mMap.clear();
-                    
+
+                    // Clear the map if it's initialized
+                    if (mMap != null) {
+                        mMap.clear();
+                    }
+
                     // Reset selectedLocation
                     selectedLocation = null;
-                    
+
                     // Clear saved geofence settings
                     clearGeofenceSettings();
                 })

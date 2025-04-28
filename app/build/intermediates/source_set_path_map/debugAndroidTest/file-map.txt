@@ -1,0 +1,7 @@
+com.example.geofenceapp.test.app-jetified-annotation-experimental-1.3.0-0 C:\Users\NeuralBits\.gradle\caches\transforms-3\9c93c0208ca51e60d003bcd86a7f4e2d\transformed\jetified-annotation-experimental-1.3.0\res
+com.example.geofenceapp.test.app-jetified-core-1.5.0-1 C:\Users\NeuralBits\.gradle\caches\transforms-3\ce699b31d3289b6ef35fe6e15a29ea66\transformed\jetified-core-1.5.0\res
+com.example.geofenceapp.test.app-androidTest-2 C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\build\generated\res\resValues\androidTest\debug
+com.example.geofenceapp.test.app-androidTest-3 C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\build\generated\res\rs\androidTest\debug
+com.example.geofenceapp.test.app-mergeDebugAndroidTestResources-4 C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.geofenceapp.test.app-mergeDebugAndroidTestResources-5 C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.geofenceapp.test.app-merged_res-6 C:\Users\NeuralBits\Downloads\GeoGuardian\GeoGuardian\app\build\intermediates\merged_res\debugAndroidTest

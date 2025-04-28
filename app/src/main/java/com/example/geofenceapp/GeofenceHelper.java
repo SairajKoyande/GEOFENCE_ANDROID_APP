@@ -1,9 +1,11 @@
 package com.example.geofenceapp;
 
-import android.app.PendingIntent;
+import
+        android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.util.Log;
 
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.location.Geofence;
@@ -12,6 +14,7 @@ import com.google.android.gms.location.GeofencingRequest;
 import com.google.android.gms.maps.model.LatLng;
 
 public class GeofenceHelper {
+    private static final String TAG = "GeofenceHelper";
     private final Context context;
     private PendingIntent pendingIntent;
 
@@ -20,13 +23,16 @@ public class GeofenceHelper {
     }
 
     public GeofencingRequest getGeofencingRequest(Geofence geofence) {
+        Log.d(TAG, "Creating GeofencingRequest with INITIAL_TRIGGER_ENTER | INITIAL_TRIGGER_EXIT");
         return new GeofencingRequest.Builder()
                 .addGeofence(geofence)
-                .setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER)
+                .setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER | GeofencingRequest.INITIAL_TRIGGER_EXIT)
                 .build();
     }
 
     public Geofence getGeofence(String ID, LatLng latLng, float radius, int transitionTypes) {
+        Log.d(TAG, "Creating Geofence with ID: " + ID + " at " + latLng.latitude + ", " + latLng.longitude +
+                " with radius: " + radius + "m and transitions: " + transitionTypes);
         return new Geofence.Builder()
                 .setCircularRegion(latLng.latitude, latLng.longitude, radius)
                 .setRequestId(ID)
@@ -43,14 +49,15 @@ public class GeofenceHelper {
 
         Intent intent = new Intent(context, GeofenceBroadcastReceiver.class);
         int pendingIntentFlag;
-        
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             pendingIntentFlag = PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE;
         } else {
             pendingIntentFlag = PendingIntent.FLAG_UPDATE_CURRENT;
         }
-        
+
         pendingIntent = PendingIntent.getBroadcast(context, 0, intent, pendingIntentFlag);
+        Log.d(TAG, "Created PendingIntent for GeofenceBroadcastReceiver");
         return pendingIntent;
     }
 
